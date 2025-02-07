@@ -1,0 +1,36 @@
+//thows
+class A{
+    public void show() throws ClassNotFoundException{
+        
+        try{
+        Class.forName("demo");
+        }
+        finally{
+            System.out.println("the program is executed");
+        }
+            
+        
+    /*    finally{
+            System.out.println("the program is finished");
+        }*/
+    }
+}
+    
+        
+
+public class Main {
+	static
+	{
+	    System.out.println("loaded");
+	}
+	
+	public static void main(String[] args) {
+		A obj=new A();
+		try{
+		    obj.show();
+		}
+		catch(ClassNotFoundException e){
+		    e.printStackTrace();
+		}
+	}
+}
