@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class DataTypeMismatchExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        String input = scanner.nextLine();
+        
+        try {
+            int number = Integer.parseInt(input);  // May throw NumberFormatException
+            System.out.println("You entered: " + number);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Please enter a valid integer.");
+        }
+    }
+}
